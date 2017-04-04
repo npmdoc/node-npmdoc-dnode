@@ -1,0 +1,1299 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/substack/dnode#readme">dnode (v1.2.2)</a>
+</h1>
+<h4>freestyle rpc</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode">module dnode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode">
+            function <span class="apidocSignatureSpan"></span>dnode
+            <span class="apidocSignatureSpan">(cons, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.connect">
+            function <span class="apidocSignatureSpan">dnode.</span>connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.listen">
+            function <span class="apidocSignatureSpan">dnode.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnode.</span>dnode.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.dnode">module dnode.dnode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.dnode">
+            function <span class="apidocSignatureSpan">dnode.</span>dnode
+            <span class="apidocSignatureSpan">(cons, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.dnode.prototype">module dnode.dnode.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype._createProto">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>_createProto
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.addListener">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.destroy">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.emit">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>emit
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.end">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.eventNames">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>eventNames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.getMaxListeners">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>getMaxListeners
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.handle">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>handle
+            <span class="apidocSignatureSpan">(row)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.listen">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.listenerCount">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listenerCount
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.listeners">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.on">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.once">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>once
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.pipe">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>pipe
+            <span class="apidocSignatureSpan">(dest, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.prependListener">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>prependListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.prependOnceListener">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>prependOnceListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.removeAllListeners">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.removeListener">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.setMaxListeners">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.dnode.prototype.write">
+            function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>write
+            <span class="apidocSignatureSpan">(buf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">undefined <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>domain</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode" id="apidoc.module.dnode">module dnode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode" id="apidoc.element.dnode.dnode">
+        function <span class="apidocSignatureSpan"></span>dnode
+        <span class="apidocSignatureSpan">(cons, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dnode(cons, opts) {
+    Stream.call(this);
+    var self = this;
+
+    self.opts = opts || {};
+
+    self.cons = typeof cons === 'function'
+        ? cons
+        : function () { return cons || {} }
+    ;
+
+    self.readable = true;
+    self.writable = true;
+
+    process.nextTick(function () {
+        if (self._ended) return;
+        self.proto = self._createProto();
+        self.proto.start();
+
+        if (!self._handleQueue) return;
+        for (var i = 0; i &lt; self._handleQueue.length; i++) {
+            self.handle(self._handleQueue[i]);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.connect" id="apidoc.element.dnode.connect">
+        function <span class="apidocSignatureSpan">dnode.</span>connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function () {
+    var d = new D();
+    return d.connect.apply(d, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+D.prototype.connect = function () {
+var self = this;
+var params = parseArgs(arguments);
+
+var stream;
+if (params.path) {
+    stream = net.<span class="apidocCodeKeywordSpan">connect</span>(params.path);
+}
+else if (params.port) {
+    stream = net.connect(params.port, params.host);
+}
+else {
+    throw new Error('no port or unix path given');
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.listen" id="apidoc.element.dnode.listen">
+        function <span class="apidocSignatureSpan">dnode.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listen = function () {
+    var d = new D();
+    return d.listen.apply(d, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    stream.pipe(d);
+    d.pipe(stream);
+});
+
+server.sessions = {};
+
+if (typeof params.port === 'number' &amp;&amp; params.port &gt;= 0) {
+    server.<span class="apidocCodeKeywordSpan">listen</span>(params.port, params.host);
+}
+else if (params.path) {
+    server.listen(params.path);
+}
+else {
+    throw new Error('no port or path provided');
+}
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.dnode" id="apidoc.module.dnode.dnode">module dnode.dnode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.dnode" id="apidoc.element.dnode.dnode.dnode">
+        function <span class="apidocSignatureSpan">dnode.</span>dnode
+        <span class="apidocSignatureSpan">(cons, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dnode(cons, opts) {
+    Stream.call(this);
+    var self = this;
+
+    self.opts = opts || {};
+
+    self.cons = typeof cons === 'function'
+        ? cons
+        : function () { return cons || {} }
+    ;
+
+    self.readable = true;
+    self.writable = true;
+
+    process.nextTick(function () {
+        if (self._ended) return;
+        self.proto = self._createProto();
+        self.proto.start();
+
+        if (!self._handleQueue) return;
+        for (var i = 0; i &lt; self._handleQueue.length; i++) {
+            self.handle(self._handleQueue[i]);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.dnode.prototype" id="apidoc.module.dnode.dnode.prototype">module dnode.dnode.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype._createProto" id="apidoc.element.dnode.dnode.prototype._createProto">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>_createProto
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createProto = function () {
+    var self = this;
+    var proto = protocol(function (remote) {
+        if (self._ended) return;
+
+        var ref = self.cons.call(this, remote, self);
+        if (typeof ref !== 'object') ref = this;
+
+        self.emit('local', ref, self);
+
+        return ref;
+    }, self.opts.proto);
+
+    proto.on('remote', function (remote) {
+        self.emit('remote', remote, self);
+        self.emit('ready'); // backwards compatability, deprecated
+    });
+
+    proto.on('request', function (req) {
+        if (!self.readable) return;
+
+        if (self.opts.emit === 'object') {
+            self.emit('data', req);
+        }
+        else self.emit('data', json.stringify(req) + '\n');
+    });
+
+    proto.on('fail', function (err) {
+        // errors that the remote end was responsible for
+        self.emit('fail', err);
+    });
+
+    proto.on('error', function (err) {
+        // errors that the local code was responsible for
+        self.emit('error', err);
+    });
+
+    return proto;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+;
+
+self.readable = true;
+self.writable = true;
+
+process.nextTick(function () {
+    if (self._ended) return;
+    self.proto = self.<span class="apidocCodeKeywordSpan">_createProto</span>();
+    self.proto.start();
+
+    if (!self._handleQueue) return;
+    for (var i = 0; i &lt; self._handleQueue.length; i++) {
+        self.handle(self._handleQueue[i]);
+    }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.addListener" id="apidoc.element.dnode.dnode.prototype.addListener">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.destroy" id="apidoc.element.dnode.dnode.prototype.destroy">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+    this.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.emit" id="apidoc.element.dnode.dnode.prototype.emit">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>emit
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emit(type) {
+  var er, handler, len, args, i, events, domain;
+  var needDomainExit = false;
+  var doError = (type === 'error');
+
+  events = this._events;
+  if (events)
+    doError = (doError &amp;&amp; events.error == null);
+  else if (!doError)
+    return false;
+
+  domain = this.domain;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    er = arguments[1];
+    if (domain) {
+      if (!er)
+        er = new Error('Uncaught, unspecified "error" event');
+      er.domainEmitter = this;
+      er.domain = domain;
+      er.domainThrown = false;
+      domain.emit('error', er);
+    } else if (er instanceof Error) {
+      throw er; // Unhandled 'error' event
+    } else {
+      // At least give some kind of context to the user
+      var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+      err.context = er;
+      throw err;
+    }
+    return false;
+  }
+
+  handler = events[type];
+
+  if (!handler)
+    return false;
+
+  if (domain &amp;&amp; this !== process) {
+    domain.enter();
+    needDomainExit = true;
+  }
+
+  var isFn = typeof handler === 'function';
+  len = arguments.length;
+  switch (len) {
+    // fast cases
+    case 1:
+      emitNone(handler, isFn, this);
+      break;
+    case 2:
+      emitOne(handler, isFn, this, arguments[1]);
+      break;
+    case 3:
+      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
+      break;
+    case 4:
+      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
+      break;
+    // slower
+    default:
+      args = new Array(len - 1);
+      for (i = 1; i &lt; len; i++)
+        args[i - 1] = arguments[i];
+      emitMany(handler, isFn, this, args);
+  }
+
+  if (needDomainExit)
+    domain.exit();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    throw new Error('no port or unix path given');
+}
+
+if (params.block) self.on('remote', params.block);
+
+stream.on('error', function (err) {
+    if (err &amp;&amp; err.code === 'EPIPE') return; // eat EPIPEs
+    self.<span class="apidocCodeKeywordSpan">emit</span>('error', err);
+});
+
+self.id = randomId();
+self.stream = stream;
+stream.pipe(self);
+self.pipe(stream);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.end" id="apidoc.element.dnode.dnode.prototype.end">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function () {
+    if (this._ended) return;
+    this._ended = true;
+    this.writable = false;
+    this.readable = false;
+    this.emit('end');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+dnode.prototype.listen = function () {
+var self = this;
+
+// just copy over the opts and cons, the rest will need to be re-created
+var cons = self.cons, opts = self.opts;
+self.cons = function () {};
+self.<span class="apidocCodeKeywordSpan">end</span>();
+
+var params = parseArgs(arguments);
+
+var server = net.createServer(function (stream) {
+    var d = new dnode(cons, opts);
+    do { d.id = randomId() }
+    while (server.sessions[d.id]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.eventNames" id="apidoc.element.dnode.dnode.prototype.eventNames">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>eventNames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eventNames() {
+  return this._eventsCount &gt; 0 ? Reflect.ownKeys(this._events) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.getMaxListeners" id="apidoc.element.dnode.dnode.prototype.getMaxListeners">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>getMaxListeners
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMaxListeners() {
+  return $getMaxListeners(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.handle" id="apidoc.element.dnode.dnode.prototype.handle">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>handle
+        <span class="apidocSignatureSpan">(row)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handle = function (row) {
+    if (!this.proto) {
+        if (!this._handleQueue) this._handleQueue = [];
+        this._handleQueue.push(row);
+    }
+    else this.proto.handle(row);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.nextTick(function () {
+    if (self._ended) return;
+    self.proto = self._createProto();
+    self.proto.start();
+
+    if (!self._handleQueue) return;
+    for (var i = 0; i &lt; self._handleQueue.length; i++) {
+        self.<span class="apidocCodeKeywordSpan">handle</span>(self._handleQueue[i]);
+    }
+});
+}
+
+dnode.prototype._createProto = function () {
+var self = this;
+var proto = protocol(function (remote) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.listen" id="apidoc.element.dnode.dnode.prototype.listen">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listen = function () {
+    var self = this;
+
+    // just copy over the opts and cons, the rest will need to be re-created
+    var cons = self.cons, opts = self.opts;
+    self.cons = function () {};
+    self.end();
+
+    var params = parseArgs(arguments);
+
+    var server = net.createServer(function (stream) {
+        var d = new dnode(cons, opts);
+        do { d.id = randomId() }
+        while (server.sessions[d.id]);
+
+        server.sessions[d.id] = d;
+        d.on('end', function () {
+            delete server.sessions[d.id];
+        });
+
+        d.on('local', function (ref) {
+            server.emit('local', ref, d);
+        });
+
+        d.on('remote', function (remote) {
+            server.emit('remote', remote, d);
+        });
+
+        stream.on('error', function (err) {
+            if (err &amp;&amp; err.code === 'EPIPE') return; // eat EPIPEs
+            d.emit('error', err);
+        });
+
+        d.stream = stream;
+        stream.pipe(d);
+        d.pipe(stream);
+    });
+
+    server.sessions = {};
+
+    if (typeof params.port === 'number' &amp;&amp; params.port &gt;= 0) {
+        server.listen(params.port, params.host);
+    }
+    else if (params.path) {
+        server.listen(params.path);
+    }
+    else {
+        throw new Error('no port or path provided');
+    }
+
+    if (params.block) server.on('listening', params.block);
+
+    return server;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    stream.pipe(d);
+    d.pipe(stream);
+});
+
+server.sessions = {};
+
+if (typeof params.port === 'number' &amp;&amp; params.port &gt;= 0) {
+    server.<span class="apidocCodeKeywordSpan">listen</span>(params.port, params.host);
+}
+else if (params.path) {
+    server.listen(params.path);
+}
+else {
+    throw new Error('no port or path provided');
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.listenerCount" id="apidoc.element.dnode.dnode.prototype.listenerCount">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listenerCount
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listenerCount(type) {
+  const events = this._events;
+
+  if (events) {
+    const evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.listeners" id="apidoc.element.dnode.dnode.prototype.listeners">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listeners(type) {
+  var evlistener;
+  var ret;
+  var events = this._events;
+
+  if (!events)
+    ret = [];
+  else {
+    evlistener = events[type];
+    if (!evlistener)
+      ret = [];
+    else if (typeof evlistener === 'function')
+      ret = [evlistener];
+    else
+      ret = arrayClone(evlistener, evlistener.length);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.on" id="apidoc.element.dnode.dnode.prototype.on">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+else if (params.port) {
+    stream = net.connect(params.port, params.host);
+}
+else {
+    throw new Error('no port or unix path given');
+}
+
+if (params.block) self.<span class="apidocCodeKeywordSpan">on</span>('remote', params.block);
+
+stream.on('error', function (err) {
+    if (err &amp;&amp; err.code === 'EPIPE') return; // eat EPIPEs
+    self.emit('error', err);
+});
+
+self.id = randomId();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.once" id="apidoc.element.dnode.dnode.prototype.once">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>once
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function once(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.pipe" id="apidoc.element.dnode.dnode.prototype.pipe">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>pipe
+        <span class="apidocSignatureSpan">(dest, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function (dest, options) {
+  var source = this;
+
+  function ondata(chunk) {
+    if (dest.writable) {
+      if (false === dest.write(chunk) &amp;&amp; source.pause) {
+        source.pause();
+      }
+    }
+  }
+
+  source.on('data', ondata);
+
+  function ondrain() {
+    if (source.readable &amp;&amp; source.resume) {
+      source.resume();
+    }
+  }
+
+  dest.on('drain', ondrain);
+
+  // If the 'end' option is not supplied, dest.end() will be called when
+  // source gets the 'end' or 'close' events.  Only dest.end() once.
+  if (!dest._isStdio &amp;&amp; (!options || options.end !== false)) {
+    source.on('end', onend);
+    source.on('close', onclose);
+  }
+
+  var didOnEnd = false;
+  function onend() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    dest.end();
+  }
+
+
+  function onclose() {
+    if (didOnEnd) return;
+    didOnEnd = true;
+
+    if (typeof dest.destroy === 'function') dest.destroy();
+  }
+
+  // don't leave dangling pipes when there are errors.
+  function onerror(er) {
+    cleanup();
+    if (EE.listenerCount(this, 'error') === 0) {
+      throw er; // Unhandled stream error in pipe.
+    }
+  }
+
+  source.on('error', onerror);
+  dest.on('error', onerror);
+
+  // remove all the event listeners that were added.
+  function cleanup() {
+    source.removeListener('data', ondata);
+    dest.removeListener('drain', ondrain);
+
+    source.removeListener('end', onend);
+    source.removeListener('close', onclose);
+
+    source.removeListener('error', onerror);
+    dest.removeListener('error', onerror);
+
+    source.removeListener('end', cleanup);
+    source.removeListener('close', cleanup);
+
+    dest.removeListener('close', cleanup);
+  }
+
+  source.on('end', cleanup);
+  source.on('close', cleanup);
+
+  dest.on('close', cleanup);
+  dest.emit('pipe', source);
+
+  // Allow for unix-like usage: A.pipe(B).pipe(C)
+  return dest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+stream.on('error', function (err) {
+    if (err &amp;&amp; err.code === 'EPIPE') return; // eat EPIPEs
+    self.emit('error', err);
+});
+
+self.id = randomId();
+self.stream = stream;
+stream.<span class="apidocCodeKeywordSpan">pipe</span>(self);
+self.pipe(stream);
+
+return self;
+};
+
+dnode.prototype.listen = function () {
+var self = this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.prependListener" id="apidoc.element.dnode.dnode.prototype.prependListener">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>prependListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependListener(type, listener) {
+  return _addListener(this, type, listener, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.prependOnceListener" id="apidoc.element.dnode.dnode.prototype.prependOnceListener">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>prependOnceListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prependOnceListener(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.prependListener(type, _onceWrap(this, type, listener));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.removeAllListeners" id="apidoc.element.dnode.dnode.prototype.removeAllListeners">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeAllListeners(type) {
+  var listeners, events;
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!events.removeListener) {
+    if (arguments.length === 0) {
+      this._events = new EventHandlers();
+      this._eventsCount = 0;
+    } else if (events[type]) {
+      if (--this._eventsCount === 0)
+        this._events = new EventHandlers();
+      else
+        delete events[type];
+    }
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    var keys = Object.keys(events);
+    for (var i = 0, key; i &lt; keys.length; ++i) {
+      key = keys[i];
+      if (key === 'removeListener') continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners('removeListener');
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+    return this;
+  }
+
+  listeners = events[type];
+
+  if (typeof listeners === 'function') {
+    this.removeListener(type, listeners);
+  } else if (listeners) {
+    // LIFO order
+    do {
+      this.removeListener(type, listeners[listeners.length - 1]);
+    } while (listeners[0]);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.removeListener" id="apidoc.element.dnode.dnode.prototype.removeListener">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeListener(type, listener) {
+  var list, events, position, i, originalListener;
+
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+
+  events = this._events;
+  if (!events)
+    return this;
+
+  list = events[type];
+  if (!list)
+    return this;
+
+  if (list === listener || list.listener === listener) {
+    if (--this._eventsCount === 0)
+      this._events = new EventHandlers();
+    else {
+      delete events[type];
+      if (events.removeListener)
+        this.emit('removeListener', type, list.listener || listener);
+    }
+  } else if (typeof list !== 'function') {
+    position = -1;
+
+    for (i = list.length; i-- &gt; 0;) {
+      if (list[i] === listener || list[i].listener === listener) {
+        originalListener = list[i].listener;
+        position = i;
+        break;
+      }
+    }
+
+    if (position &lt; 0)
+      return this;
+
+    if (list.length === 1) {
+      list[0] = undefined;
+      if (--this._eventsCount === 0) {
+        this._events = new EventHandlers();
+        return this;
+      } else {
+        delete events[type];
+      }
+    } else {
+      spliceOne(list, position);
+    }
+
+    if (events.removeListener)
+      this.emit('removeListener', type, originalListener || listener);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.setMaxListeners" id="apidoc.element.dnode.dnode.prototype.setMaxListeners">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setMaxListeners(n) {
+  if (typeof n !== 'number' || n &lt; 0 || isNaN(n))
+    throw new TypeError('"n" argument must be a positive number');
+  this._maxListeners = n;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.dnode.prototype.write" id="apidoc.element.dnode.dnode.prototype.write">
+        function <span class="apidocSignatureSpan">dnode.dnode.prototype.</span>write
+        <span class="apidocSignatureSpan">(buf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (buf) {
+    if (this._ended) return;
+    var self = this;
+    var row;
+
+    if (buf &amp;&amp; typeof buf === 'object'
+    &amp;&amp; buf.constructor &amp;&amp; buf.constructor.name === 'Buffer'
+    &amp;&amp; buf.length
+    &amp;&amp; typeof buf.slice === 'function') {
+        // treat like a buffer
+        if (!self._bufs) self._bufs = [];
+
+        // treat like a buffer
+        for (var i = 0, j = 0; i &lt; buf.length; i++) {
+            if (buf[i] === 0x0a) {
+                self._bufs.push(buf.slice(j, i));
+
+                var line = '';
+                for (var k = 0; k &lt; self._bufs.length; k++) {
+                    line += String(self._bufs[k]);
+                }
+
+                try { row = json.parse(line) }
+                catch (err) { return self.end() }
+
+                j = i + 1;
+
+                self.handle(row);
+                self._bufs = [];
+            }
+        }
+
+        if (j &lt; buf.length) self._bufs.push(buf.slice(j, buf.length));
+    }
+    else if (buf &amp;&amp; typeof buf === 'object') {
+        // .isBuffer() without the Buffer
+        // Use self to pipe JSONStream.parse() streams.
+        self.handle(buf);
+    }
+    else {
+        if (typeof buf !== 'string') buf = String(buf);
+        if (!self._line) self._line = '';
+
+        for (var i = 0; i &lt; buf.length; i++) {
+            if (buf.charCodeAt(i) === 0x0a) {
+                try { row = json.parse(self._line) }
+                catch (err) { return self.end() }
+
+                self._line = '';
+                self.handle(row);
+            }
+            else self._line += buf.charAt(i)
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
