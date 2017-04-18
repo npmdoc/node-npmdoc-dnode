@@ -72,6 +72,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.browser">
+            function <span class="apidocSignatureSpan">dnode.</span>browser
+            <span class="apidocSignatureSpan">(cons, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.dnode.connect">
             function <span class="apidocSignatureSpan">dnode.</span>connect
             <span class="apidocSignatureSpan">()</span>
@@ -90,7 +99,51 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.parse_args">
+            function <span class="apidocSignatureSpan">dnode.</span>parse_args
+            <span class="apidocSignatureSpan">(argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.toString">
+            function <span class="apidocSignatureSpan">dnode.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dnode.</span>dnode.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.browser">module dnode.browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.browser.browser">
+            function <span class="apidocSignatureSpan">dnode.</span>browser
+            <span class="apidocSignatureSpan">(cons, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.connect">module dnode.connect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.connect.connect">
+            function <span class="apidocSignatureSpan">dnode.</span>connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
 
         </li>
 
@@ -299,6 +352,45 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.listen">module dnode.listen</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.listen.listen">
+            function <span class="apidocSignatureSpan">dnode.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.parse_args">module dnode.parse_args</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.parse_args.parse_args">
+            function <span class="apidocSignatureSpan">dnode.</span>parse_args
+            <span class="apidocSignatureSpan">(argv)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dnode.toString">module dnode.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dnode.toString.toString">
+            function <span class="apidocSignatureSpan">dnode.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -336,6 +428,21 @@
             self.handle(self._handleQueue[i]);
         }
     });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.browser" id="apidoc.element.dnode.browser">
+        function <span class="apidocSignatureSpan">dnode.</span>browser
+        <span class="apidocSignatureSpan">(cons, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser = function (cons, opts) {
+    return new dnode(cons, opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -405,6 +512,137 @@ else {
     </ul>
 
 
+
+    <h2>
+        <a href="#apidoc.element.dnode.parse_args" id="apidoc.element.dnode.parse_args">
+        function <span class="apidocSignatureSpan">dnode.</span>parse_args
+        <span class="apidocSignatureSpan">(argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse_args = function (argv) {
+    var params = {};
+    for (var i = 0; i &#x3c; argv.length; i++) {
+        var arg = argv[i];
+
+        if (typeof arg === &#x27;string&#x27;) {
+            if (arg.match(/^\d+$/)) {
+                params.port = parseInt(arg, 10);
+            }
+            else if (arg.match(&#x27;^/&#x27;)) {
+                params.path = arg;
+            }
+            else {
+                params.host = arg;
+            }
+        }
+        else if (typeof arg === &#x27;number&#x27;) {
+            params.port = arg;
+        }
+        else if (typeof arg === &#x27;function&#x27;) {
+            params.block = arg;
+        }
+        else if (typeof arg === &#x27;object&#x27;) {
+            for (var key in arg) {
+                if (key === &#x27;port&#x27;) {
+                    params[key] = parseInt(arg[key], 10)
+                }
+                else params[key] = arg[key]
+            }
+        }
+        // ignore everything else
+    };
+
+    return params;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.toString" id="apidoc.element.dnode.toString">
+        function <span class="apidocSignatureSpan">dnode.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return server;
+};
+
+function randomId () {
+    var s = &#x27;&#x27;;
+    for (var i = 0; i &#x3c; 4; i++) {
+        s += Math.random().<span class="apidocCodeKeywordSpan">toString</span>(16).slice(2);
+    }
+    return s;
+}
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.browser" id="apidoc.module.dnode.browser">module dnode.browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.browser.browser" id="apidoc.element.dnode.browser.browser">
+        function <span class="apidocSignatureSpan">dnode.</span>browser
+        <span class="apidocSignatureSpan">(cons, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser = function (cons, opts) {
+    return new dnode(cons, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.connect" id="apidoc.module.dnode.connect">module dnode.connect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.connect.connect" id="apidoc.element.dnode.connect.connect">
+        function <span class="apidocSignatureSpan">dnode.</span>connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function () {
+    var d = new D();
+    return d.connect.apply(d, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+D.prototype.connect = function () {
+var self = this;
+var params = parseArgs(arguments);
+
+var stream;
+if (params.path) {
+    stream = net.<span class="apidocCodeKeywordSpan">connect</span>(params.path);
+}
+else if (params.port) {
+    stream = net.connect(params.port, params.host);
+}
+else {
+    throw new Error(&#x27;no port or unix path given&#x27;);
+}
+...</pre></li>
+    </ul>
 
 
 </div>
@@ -1293,6 +1531,125 @@ var self = this;
     </ul>
 
 
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.listen" id="apidoc.module.dnode.listen">module dnode.listen</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.listen.listen" id="apidoc.element.dnode.listen.listen">
+        function <span class="apidocSignatureSpan">dnode.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listen = function () {
+    var d = new D();
+    return d.listen.apply(d, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    stream.pipe(d);
+    d.pipe(stream);
+});
+
+server.sessions = {};
+
+if (typeof params.port === &#x27;number&#x27; &#x26;&#x26; params.port &#x3e;= 0) {
+    server.<span class="apidocCodeKeywordSpan">listen</span>(params.port, params.host);
+}
+else if (params.path) {
+    server.listen(params.path);
+}
+else {
+    throw new Error(&#x27;no port or path provided&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.parse_args" id="apidoc.module.dnode.parse_args">module dnode.parse_args</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.parse_args.parse_args" id="apidoc.element.dnode.parse_args.parse_args">
+        function <span class="apidocSignatureSpan">dnode.</span>parse_args
+        <span class="apidocSignatureSpan">(argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse_args = function (argv) {
+    var params = {};
+    for (var i = 0; i &#x3c; argv.length; i++) {
+        var arg = argv[i];
+
+        if (typeof arg === &#x27;string&#x27;) {
+            if (arg.match(/^\d+$/)) {
+                params.port = parseInt(arg, 10);
+            }
+            else if (arg.match(&#x27;^/&#x27;)) {
+                params.path = arg;
+            }
+            else {
+                params.host = arg;
+            }
+        }
+        else if (typeof arg === &#x27;number&#x27;) {
+            params.port = arg;
+        }
+        else if (typeof arg === &#x27;function&#x27;) {
+            params.block = arg;
+        }
+        else if (typeof arg === &#x27;object&#x27;) {
+            for (var key in arg) {
+                if (key === &#x27;port&#x27;) {
+                    params[key] = parseInt(arg[key], 10)
+                }
+                else params[key] = arg[key]
+            }
+        }
+        // ignore everything else
+    };
+
+    return params;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dnode.toString" id="apidoc.module.dnode.toString">module dnode.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dnode.toString.toString" id="apidoc.element.dnode.toString.toString">
+        function <span class="apidocSignatureSpan">dnode.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return server;
+};
+
+function randomId () {
+    var s = &#x27;&#x27;;
+    for (var i = 0; i &#x3c; 4; i++) {
+        s += Math.random().<span class="apidocCodeKeywordSpan">toString</span>(16).slice(2);
+    }
+    return s;
+}
+...</pre></li>
+    </ul>
 
 
 </div>
