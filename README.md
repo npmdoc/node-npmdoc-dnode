@@ -1,6 +1,6 @@
 # npmdoc-dnode
 
-#### api documentation for  [dnode (v1.2.2)](https://github.com/substack/dnode#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-dnode.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dnode) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dnode.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dnode)
+#### basic api documentation for  [dnode (v1.2.2)](https://github.com/substack/dnode#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-dnode.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dnode) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dnode.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dnode)
 
 #### freestyle rpc
 
@@ -89,7 +89,8 @@
             "android-browser/latest"
         ]
     },
-    "version": "1.2.2"
+    "version": "1.2.2",
+    "bin": {}
 }
 ```
 
